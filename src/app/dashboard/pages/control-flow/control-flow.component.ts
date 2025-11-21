@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
     imports: [],
     templateUrl: './control-flow.component.html',
 })
-export class controlFlowComponent {}
+export default class controlFlowComponent {}
