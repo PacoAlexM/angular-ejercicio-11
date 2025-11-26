@@ -1,2 +1,24 @@
-<p>Defer-views works!</p>
-;
+<my-title title="Defer Views / Blocks" />
+
+<section class="grid grid-cols-1">
+    @defer () {
+        <heavy-loaders-slow cssClass="bg-blue-500" />
+    }
+    @placeholder {
+        <p class="h-[600px] w-full bg-linear-to-r from-gray-200 to-gray-400 animate-pulse">Cargando vista...</p>
+    }
+
+    @defer (on idle) {
+        <heavy-loaders-slow cssClass="bg-green-500" />
+    }
+    @placeholder {
+        <p class="h-[600px] w-full bg-linear-to-r from-gray-200 to-gray-400 animate-pulse">Cargando vista...</p>
+    }
+
+    @defer (on viewport) {
+        <heavy-loaders-slow cssClass="bg-red-500" />
+    }
+    @placeholder {
+        <p class="h-[600px] w-full bg-linear-to-r from-gray-200 to-gray-400 animate-pulse">Cargando vista...</p>
+    }
+</section>
